@@ -27,11 +27,12 @@ module.exports = {
       secondary: "#3B3B3B",
       purple: "#A259FF",
     },
+
     fill: {
       purple: "#A259FF",
     },
     lineHeight: {
-      small:1.1,
+      small: 1.1,
       large: 1.5,
       normal: 1.4,
     },

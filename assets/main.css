@@ -10,7 +10,7 @@ body {
   @apply text-white leading-large bg-primary;
 }
 .my-container {
-  @apply py-10 md:py-20 lg:px-28 md:px-20 px-7 w-screen;
+  @apply py-10 md:py-20 lg:px-28 md:px-20 px-7  lg:max-w-[1280px] mx-auto;
 }
 
 /* buttons */
@@ -34,6 +34,9 @@ body {
 .btn-black-primary-sm {
   @apply bg-primary border-purple border-2 text-white transition-all ease-in-out duration-300 rounded-[20px] w-max h-[46px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-base font-semibold;
 }
+.hover {
+  @apply transition-all;
+}
 
 /* button icon styling */
 .btn-purple-primary-lg::before,
@@ -50,7 +53,8 @@ body {
 .btn-purple-primary-md:hover,
 .btn-black-primary-md:hover,
 .btn-purple-primary-sm:hover,
-.btn-black-primary-sm:hover {
+.btn-black-primary-sm:hover,
+.hover:hover {
   transform: scale(0.95);
 }
 
