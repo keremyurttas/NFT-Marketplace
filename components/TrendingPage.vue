@@ -1,6 +1,6 @@
 <template>
   <div class="my-container">
-    <custom-header-and-text>
+    <custom-header-and-text class="mb-10 lg:mb-14">
       <template #header> Trending Collection </template>
       <template #text>
         Checkout our weekly updated trending collection.

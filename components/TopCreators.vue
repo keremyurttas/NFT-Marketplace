@@ -1,6 +1,6 @@
 <template>
   <div class="my-container">
-    <div class="flex justify-between items-end mb-16">
+    <div class="flex justify-between items-end mb-10">
       <custom-header-and-text class="mb-0 md:max-w-[50%] lg:max-w-full">
         <template #header>Top Creators</template>
         <template #text
@@ -8,7 +8,7 @@
         >
       </custom-header-and-text>
       <div class="btn-black-primary-md hidden md:flex">
-        <img src="../assets/RocketLaunchWhite.svg" alt="" />
+        <img src="../assets/RocketLaunchPurple.svg" alt="" />
         View Rankings
       </div>
     </div>
@@ -19,7 +19,9 @@
         v-for="(card, i) in creators"
       ></creator-card>
     </div>
-    <div class="grid lg:hidden sm:grid-cols-2 gap-y-8 justify-center place-items-center">
+    <div
+      class="grid lg:hidden md:grid-cols-2 md:gap-y-[30px] gap-y-5 justify-center place-items-center"
+    >
       <creator-card
         :card="card"
         :index="i"

@@ -31,6 +31,10 @@ module.exports = {
     fill: {
       purple: "#A259FF",
     },
+    screens: {
+      lg: "1280px",
+      md: "835px",
+    },
     lineHeight: {
       small: 1.1,
       large: 1.5,

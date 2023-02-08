@@ -1,8 +1,8 @@
 <template>
-  <div class="my-container flex justify-between ">
-    <div class="md:block hidden md:w-[330px] lg:w-[510px] space-y-8">
+  <div class="my-container flex justify-between">
+    <div class="md:block hidden md:w-[330px] lg:w-[510px] space-y-6">
       <h1
-        class="md:text-2xl lg:text-4xl font-bold capitalize leading-small mb-3"
+        class="md:text-2xl lg:text-4xl lg:font-bold font-semibold capitalize leading-small mb-3"
       >
         Discover digital art & Collect NFTs
       </h1>
@@ -15,7 +15,7 @@
         Get Started
       </button>
       <div class="flex justify-between">
-        <div v-for="cell in counter" class="grid">
+        <div v-for="cell in counter" class="grid pr-8">
           <strong class="md:text-lg lg:text-xl font-bold font-mono"
             >{{ cell.count }}k+</strong
           >
@@ -28,14 +28,16 @@
     <div class="md:block hidden aspect-square md:w-[330px] lg:w-[510px]">
       <img src="../assets/HighlightedNFT.svg" alt="" />
     </div>
-    <div class="space-y-10 md:hidden grid">
-      <h1 class="text-xl font-bold capitalize leading-small mb-3">
-        Discover digital art & Collect NFTs
-      </h1>
-      <span class="text-base font-normal"
-        >NFT marketplace UI created with Anima for Figma. Collect, buy and sell
-        art from more than 20k NFT artists.</span
-      >
+    <div class="space-y-9 md:hidden grid">
+      <div>
+        <h1 class="text-xl mb-3 font-semibold capitalize leading-normal">
+          Discover digital art & Collect NFTs
+        </h1>
+        <span class="text-base font-normal"
+          >NFT marketplace UI created with Anima for Figma. Collect, buy and
+          sell art from more than 20k NFT artists.</span
+        >
+      </div>
       <div class="aspect-square w-[315px] justify-self-center">
         <img src="../assets/HighlightedNFT.svg" alt="" />
       </div>
