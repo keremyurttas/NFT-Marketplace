@@ -4,5 +4,6 @@
     <home-section></home-section>
     <trending-page></trending-page>
     <top-creators></top-creators>
+    <categories-section></categories-section>
   </div>
 </template>

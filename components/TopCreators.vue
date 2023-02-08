@@ -12,7 +12,7 @@
         View Rankings
       </div>
     </div>
-    <div class="lg:grid grid-cols-4 gap-y-8 hidden place-items-center">
+    <div class="lg:grid grid-cols-4 gap-y-8 hidden place-items-center gap-x-8">
       <creator-card
         :card="card"
         :index="i"
@@ -20,7 +20,7 @@
       ></creator-card>
     </div>
     <div
-      class="grid lg:hidden md:grid-cols-2 md:gap-y-[30px] gap-y-5 justify-center place-items-center"
+      class="grid mb-10 lg:hidden md:grid-cols-2 md:gap-y-[30px] gap-y-5 gap-x-5 justify-center place-items-center"
     >
       <creator-card
         :card="card"
@@ -28,6 +28,10 @@
         v-for="(card, i) in creators.splice(0, 6)"
         class="content-center"
       ></creator-card>
+    </div>
+    <div class="btn-black-primary-md w-full flex md:hidden">
+      <img src="../assets/RocketLaunchPurple.svg" alt="" />
+      View Rankings
     </div>
   </div>
 </template>

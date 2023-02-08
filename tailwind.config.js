@@ -35,6 +35,9 @@ module.exports = {
       lg: "1280px",
       md: "835px",
     },
+    borderRadius: {
+      base: "20px",
+    },
     lineHeight: {
       small: 1.1,
       large: 1.5,
