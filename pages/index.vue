@@ -5,5 +5,6 @@
     <trending-page></trending-page>
     <top-creators></top-creators>
     <categories-section></categories-section>
+    <discover-section></discover-section>
   </div>
 </template>
