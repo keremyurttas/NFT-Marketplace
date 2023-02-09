@@ -9,6 +9,17 @@
 body {
   @apply text-white leading-large bg-primary;
 }
+.mushroom {
+  background: url(../assets/Mushroom.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* .mushroom:after {
+  content: "";
+  @apply bg-gradient_mushroom absolute w-full h-full;
+} */
 .my-container {
   @apply py-10 lg:px-28  md:px-0 md:py-10 lg:py-20  lg:max-w-[1280px] mx-auto md:max-w-[690px] max-w-[315px];
 }

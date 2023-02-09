@@ -50,11 +50,13 @@ module.exports = {
       primary: "#858584",
       white: "#ffff",
       purple: "#A259FF",
+      black: "#2B2B2B",
     },
     extend: {
       backgroundImage: {
         gradient_primary: "linear-gradient(to right bottom, #a259ff,#686cfa)",
         gradient_secondary: "linear-gradient(to right bottom, #a259ff,#ff6251)",
+        gradient_mushroom: "linear-gradient(to top, #a259ff,#2B2B2B)",
       },
     },
   },

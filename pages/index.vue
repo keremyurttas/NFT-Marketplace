@@ -6,5 +6,6 @@
     <top-creators></top-creators>
     <categories-section></categories-section>
     <discover-section></discover-section>
+    <mushroom-nft></mushroom-nft>
   </div>
 </template>
