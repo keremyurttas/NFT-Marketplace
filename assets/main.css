@@ -10,7 +10,7 @@ body {
   @apply text-white leading-large bg-primary;
 }
 .mushroom {
-  background: url(../assets/Mushroom.png) no-repeat center center;
+  background: url(../assets/Mushroom.svg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

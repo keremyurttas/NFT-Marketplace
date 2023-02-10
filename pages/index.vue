@@ -7,5 +7,7 @@
     <categories-section></categories-section>
     <discover-section></discover-section>
     <mushroom-nft></mushroom-nft>
+    <instructions-section></instructions-section>
+    <email-section></email-section>
   </div>
 </template>

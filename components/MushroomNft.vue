@@ -26,7 +26,7 @@
         </h3>
 
         <button
-          class="bg-[#ffff] hidden text-black font-semibold md:flex gap-x-3 items-center justify-between px-12 py-5 rounded-base"
+          class="bg-[#ffff] hidden hover text-black font-semibold md:flex gap-x-3 items-center justify-between px-12 py-5 rounded-base"
         >
           <img src="../assets/mini-icons/EyePurple.svg" alt="" />
           See NFT

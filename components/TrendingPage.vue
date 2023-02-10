@@ -7,19 +7,19 @@
       </template>
     </custom-header-and-text>
     <div class="hidden lg:flex justify-between">
-      <trending-cards :card="card" v-for="card in trendings"></trending-cards>
+      <trending-card :card="card" v-for="card in trendings"></trending-card>
     </div>
     <div class="hidden md:flex lg:hidden justify-between">
-      <trending-cards
+      <trending-card
         :card="card"
         v-for="card in trendings.splice(0, 2)"
-      ></trending-cards>
+      ></trending-card>
     </div>
     <div class="flex md:hidden justify-center">
-      <trending-cards
+      <trending-card
         :card="card"
         v-for="card in trendings.splice(0, 1)"
-      ></trending-cards>
+      ></trending-card>
     </div>
   </div>
 </template>
