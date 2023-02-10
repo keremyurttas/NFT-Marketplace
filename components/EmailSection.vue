@@ -1,16 +1,16 @@
 <template>
-  <div class="my-container">
+  <div class="my-container md:pb-20 lg:pt-10">
     <div
       class="lg:p-[60px] md:px-[30px] md:py-10 md:flex items-center md:bg-secondary md:rounded-base"
     >
       <img
-        class="lg:mr-20 mr-8 lg:w-[425px] w-[315px] h-[255px] lg:h-[310px] md:w-[300px] md:h-[280px] mb-[30px] md:mb-0"
+        class="lg:mr-20 mr-8 lg:w-[425px] w-[315px] h-[255px] lg:h-[310px] md:w-[300px] md:min-h-[280px] mb-[30px] md:mb-0"
         src="../assets/Asthronot.svg"
         alt=""
       />
       <div class="">
         <div class="mb-10">
-          <h3 class="my-header mb-2.5 max-w-[350px] capitalize leading-normal">
+          <h3 class="my-header mb-2.5 max-w-[350px] capitalize">
             Join our weekly digest
           </h3>
           <span class="lg:text-lg text-base leading-large"

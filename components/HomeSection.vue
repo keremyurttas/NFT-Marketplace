@@ -2,7 +2,7 @@
   <div class="my-container flex justify-between">
     <div class="md:block hidden md:w-[330px] lg:w-[510px] space-y-6">
       <h1
-        class="md:text-2xl lg:text-4xl lg:font-bold font-semibold capitalize leading-small mb-3"
+        class="md:text-2xl lg:text-4xl lg:font-bold font-semibold capitalize leading-xsmall mb-3"
       >
         Discover digital art & Collect NFTs
       </h1>

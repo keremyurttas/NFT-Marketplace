@@ -21,7 +21,7 @@
             <span>Shroomie</span>
           </div>
         </nuxt-link>
-        <h3 class="text-2xl lg:text-3xl font-semibold md:w-max leading-small">
+        <h3 class="text-2xl lg:text-3xl font-semibold md:w-max leading-xsmall">
           Magic Mashrooms
         </h3>
 
@@ -32,18 +32,7 @@
           See NFT
         </button>
       </div>
-      <div
-        class="p-[30px] bg-secondary rounded opacity-90 w-[315px] lg:w-min rounded-base h-min"
-      >
-        <div class="font-mono text-sm">Auction ends in:</div>
-        <div class="text-2xl font-mono font-bold flex items-center">
-          59 <span class="text-xl mx-3.5">:</span> 59
-          <span class="text-xl mx-3.5">:</span> 59
-        </div>
-        <div class="flex justify-between text-sm">
-          <span>Hours</span><span>Minutes</span><span>Second</span>
-        </div>
-      </div>
+      <countDown></countDown>
       <button
         class="bg-[#ffff] md:hidden text-black font-semibold flex gap-x-3 items-center justify-center px-12 py-5 rounded-base"
       >

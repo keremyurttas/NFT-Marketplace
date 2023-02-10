@@ -27,10 +27,6 @@ module.exports = {
       secondary: "#3B3B3B",
       purple: "#A259FF",
     },
-
-    fill: {
-      purple: "#A259FF",
-    },
     screens: {
       lg: "1280px",
       md: "835px",
@@ -39,7 +35,8 @@ module.exports = {
       base: "20px",
     },
     lineHeight: {
-      small: 1.1,
+      xsmall: 1.1,
+      small:1.2,
       large: 1.5,
       normal: 1.4,
     },
@@ -51,7 +48,9 @@ module.exports = {
       white: "#ffff",
       purple: "#A259FF",
       black: "#2B2B2B",
+      footer: "#CCCCCC",
     },
+
     extend: {
       backgroundImage: {
         gradient_primary: "linear-gradient(to right bottom, #a259ff,#686cfa)",

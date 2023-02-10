@@ -9,5 +9,6 @@
     <mushroom-nft></mushroom-nft>
     <instructions-section></instructions-section>
     <email-section></email-section>
+    <nft-footer></nft-footer>
   </div>
 </template>

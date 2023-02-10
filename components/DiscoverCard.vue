@@ -1,10 +1,12 @@
 <template>
   <nuxt-link to="/user">
-    <div class="md:w-[330px] w-[315px] rounded-base bg-secondary">
-      <img :src="card.img" alt="" />
-      <div class="pb-[25px] px-[30px] pt-5">
+    <div class="md:w-[330px] w-[315px] rounded-base bg-secondary hover">
+      <img class="" :src="card.img" alt="" />
+      <div class="pb-[25px] px-5 pt-5">
         <div>
-          <h5 class="font-semibold lg:text-lg text-base mb-1">{{ card.header }}</h5>
+          <h5 class="font-semibold text-lg mb-1">
+            {{ card.header }}
+          </h5>
           <div class="flex mb-6">
             <img
               width="24"
@@ -20,7 +22,7 @@
               <span> Price </span>
               <span>Highest Bid</span>
             </div>
-            <div class="text-base font-mono flex justify-between">
+            <div class="text-sm font-mono flex justify-between">
               <span> {{ card.price1 }} ETH </span>
               <span>{{ card.price1 }} wETH</span>
             </div>

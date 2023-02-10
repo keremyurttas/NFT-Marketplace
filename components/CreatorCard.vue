@@ -4,7 +4,7 @@
       class="hover lg:p-5 rounded-[20px] bg-secondary w-max flex lg:flex-col items-center justify-center p-5 relative gap-x-5"
     >
       <div
-        class="font-mono absolute left-3 top-3 w-[30px] h-[30px] lg:left-5 lg:top-5 flex items-center justify-center text-primary bg-primary rounded-full"
+        class="font-mono absolute left-3 top-3 w-[30px] h-[30px] lg:left-5 lg:top-5 flex items-center justify-center text-primary bg-primary rounded-base"
       >
         {{ index + 1 }}
       </div>

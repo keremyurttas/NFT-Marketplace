@@ -6,7 +6,7 @@
         <template #text>Explore new trending NFTs</template>
       </custom-header-and-text>
       <div class="btn-black-primary-md hidden md:flex w-48">
-        <img src="../assets/RocketLaunchPurple.svg" alt="" />
+        <img src="../assets/mini-icons/EyePurple.svg" alt="" />
         See All
       </div>
     </div>
@@ -27,8 +27,8 @@
       ></discover-card>
     </div>
     <div class="btn-black-primary-md w-full flex md:hidden">
-      <img src="../assets/RocketLaunchPurple.svg" alt="" />
-      View Rankings
+      <img src="../assets/mini-icons/EyePurple.svg" alt="" />
+      See All
     </div>
   </div>
 </template>

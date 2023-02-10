@@ -1,9 +1,10 @@
 <template>
   <nav
-    class="md:px-12 lg:py-8 md:py-4 py-4 px-8 flex justify-between items-center bg-primary"
+    :class="{ 'overflow-hidden': isHeaderActive }"
+    class="py-4 px-8 md:px-12 lg:py-8 flex justify-between items-center bg-primary"
   >
     <nuxt-link class="w-44 lg:w-60" to="/index.vue">
-      <img src="../assets/nav/nav/logo.svg" alt="" />
+      <img src="../assets/nav/logo.svg" alt="" />
     </nuxt-link>
     <div
       class="hidden lg:flex justify-between items-center gap-x-12 font-semibold"
@@ -19,9 +20,10 @@
         </div>
       </nuxt-link>
     </div>
+
     <div
       v-if="isHeaderActive"
-      class="lg:hidden h-[70vh] grid grid-cols-1 absolute right-5 md:w-96 w-64 text-base top-5 px-8 py-12 grid-rows-3 bg-primary rounded-lg"
+      class="lg:hidden w-[55%] h-[500px] border-purple border-2 rounded-base grid grid-cols-1 absolute right-5 text-base top-5 px-8 py-12 grid-rows-3 bg-primary"
     >
       <button @click="isHeaderActive = false" class="absolute right-3 top-3">
         <img
@@ -33,7 +35,6 @@
       <nuxt-link to="/marketplace.vue"> Marketplace </nuxt-link>
       <nuxt-link to="/rankings.vue"> Rankings </nuxt-link>
       <nuxt-link to="/connectWallet.vue"> Connect a wallet </nuxt-link>
-
       <nuxt-link to="/signUp.vue">
         <div class="btn-purple-primary-sm px-10">
           <img class="w-5 h-5" src="../assets/mini-icons/User.svg" alt="" />
@@ -48,4 +49,9 @@
 </template>
 <script setup>
 const isHeaderActive = ref(false);
+watch(isHeaderActive, () => {
+  isHeaderActive.value
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "auto");
+});
 </script>
