@@ -17,6 +17,7 @@ input {
   @apply text-black;
 }
 
+
 .my-container {
   @apply py-10 lg:px-28  md:px-0 md:py-10 lg:py-20  lg:max-w-[1280px] mx-auto md:max-w-[690px] max-w-[315px];
 }

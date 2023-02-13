@@ -7,31 +7,25 @@
           >Checkout Top Rated Creators on the NFT Marketplace</template
         >
       </custom-header-and-text>
-      <div class="btn-black-primary-md hidden md:flex">
-        <img src="../assets/RocketLaunchPurple.svg" alt="" />
-        View Rankings
-      </div>
+      <nuxt-link to="/ranking">
+        <div class="btn-black-primary-md hidden md:flex">
+          <img src="../assets/RocketLaunchPurple.svg" alt="" />
+          View Rankings
+        </div>
+      </nuxt-link>
     </div>
-    <div class="lg:grid grid-cols-4 gap-y-8 hidden place-items-center gap-x-8">
+    <div
+      class="lg:grid-cols-4 grid lg:gap-y-8 md:grid-cols-2 md:gap-y-[30px] space-y-5 gap-x-5 place-items-center lg:gap-x-8"
+    >
       <creator-card
         :card="card"
         :index="i"
         v-for="(card, i) in creators"
       ></creator-card>
-    </div>
-    <div
-      class="grid mb-10 lg:hidden md:grid-cols-2 md:gap-y-[30px] gap-y-5 gap-x-5 justify-center place-items-center"
-    >
-      <creator-card
-        :card="card"
-        :index="i"
-        v-for="(card, i) in creators.splice(0, 6)"
-        class="content-center"
-      ></creator-card>
-    </div>
-    <div class="btn-black-primary-md w-full flex md:hidden">
-      <img src="../assets/RocketLaunchPurple.svg" alt="" />
-      View Rankings
+      <div class="btn-black-primary-md w-full flex md:hidden">
+        <img src="../assets/RocketLaunchPurple.svg" alt="" />
+        View Rankings
+      </div>
     </div>
   </div>
 </template>
@@ -54,61 +48,73 @@ const creators = [
     avatar: avatar1,
     username: "Keepitreal",
     totalSales: 34.53,
+    class: "",
   },
   {
     avatar: avatar2,
     username: "Digilab",
     totalSales: 34.53,
+    class: "",
   },
   {
     avatar: avatar3,
     username: "GravityOne",
     totalSales: 34.53,
+    class: "",
   },
   {
     avatar: avatar4,
     username: "Juanie",
     totalSales: 34.53,
+    class: "",
   },
   {
     avatar: avatar5,
     username: "Bluewhale",
     totalSales: 34.53,
+    class: "",
   },
   {
     avatar: avatar6,
     username: "Mr Fox",
     totalSales: 34.53,
+    class: "",
   },
   {
     avatar: avatar7,
     username: "Sroomie",
     totalSales: 34.53,
+    class: "hidden lg:flex",
   },
   {
     avatar: avatar8,
     username: "Robotica",
     totalSales: 34.53,
+    class: "hidden lg:flex",
   },
   {
     avatar: avatar9,
     username: "RustyRobot",
     totalSales: 34.53,
+    class: "hidden lg:flex",
   },
   {
     avatar: avatar10,
     username: "AnimaKid",
     totalSales: 34.53,
+    class: "hidden lg:flex",
   },
   {
     avatar: avatar11,
     username: "Dotku",
     totalSales: 34.53,
+    class: "hidden lg:flex",
   },
   {
     avatar: avatar12,
     username: "Ghiblier",
     totalSales: 34.53,
+    class: "hidden lg:flex",
   },
 ];
 </script>

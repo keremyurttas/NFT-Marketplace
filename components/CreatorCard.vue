@@ -1,7 +1,8 @@
 <template>
   <nuxt-link to="/user">
     <div
-      class="hover lg:p-5 rounded-[20px] bg-secondary w-max flex lg:flex-col items-center justify-center p-5 relative gap-x-5"
+      :class="card.class"
+      class="hover lg:p-5 rounded-base bg-secondary w-full flex lg:flex-col items-center justify-center p-5 relative gap-x-5"
     >
       <div
         class="font-mono absolute left-3 top-3 w-[30px] h-[30px] lg:left-5 lg:top-5 flex items-center justify-center text-primary bg-primary rounded-base"
@@ -9,7 +10,7 @@
         {{ index + 1 }}
       </div>
       <img
-        class="lg:mb-2 aspect-square lg:w-[120px] w-[56px] md:w-[60px]"
+        class="lg:mb-2 aspect-square lg:w-auto w-[60px]"
         :src="card.avatar"
         alt=""
       />

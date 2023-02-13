@@ -6,20 +6,8 @@
         Checkout our weekly updated trending collection.
       </template>
     </custom-header-and-text>
-    <div class="hidden lg:flex justify-between">
+    <div class="flex justify-between space-x-8">
       <trending-card :card="card" v-for="card in trendings"></trending-card>
-    </div>
-    <div class="hidden md:flex lg:hidden justify-between">
-      <trending-card
-        :card="card"
-        v-for="card in trendings.splice(0, 2)"
-      ></trending-card>
-    </div>
-    <div class="flex md:hidden justify-center">
-      <trending-card
-        :card="card"
-        v-for="card in trendings.splice(0, 1)"
-      ></trending-card>
     </div>
   </div>
 </template>
@@ -45,6 +33,7 @@ const trendings = [
     header: "DSGN Animals",
     avatar: avatar,
     username: "MrFox",
+    class: "block",
   },
   {
     primary: primary1,
@@ -54,6 +43,7 @@ const trendings = [
     header: "Magic Mushrooms",
     avatar: avatar1,
     username: "Shroomie",
+    class: "hidden md:block",
   },
   {
     primary: primary2,
@@ -63,6 +53,7 @@ const trendings = [
     header: "Disco Machines",
     avatar: avatar2,
     username: "BeKind2Robots",
+    class: "hidden lg:block",
   },
 ];
 </script>

@@ -22,11 +22,7 @@ module.exports = {
       "3xl": "51px",
       "4xl": "67px",
     },
-    backgroundColor: {
-      primary: "#2B2B2B",
-      secondary: "#3B3B3B",
-      purple: "#A259FF",
-    },
+
     screens: {
       lg: "1280px",
       md: "835px",
@@ -36,16 +32,19 @@ module.exports = {
     },
     lineHeight: {
       xsmall: 1.1,
-      small:1.2,
+      small: 1.2,
       large: 1.5,
       normal: 1.4,
     },
     borderColor: {
+      primary: "#2B2B2B",
+      secondary: "#3B3B3B",
       purple: "#A259FF",
     },
     textColor: {
       primary: "#858584",
       white: "#ffff",
+      inactive:"#858584",
       purple: "#A259FF",
       black: "#2B2B2B",
       footer: "#CCCCCC",
@@ -55,7 +54,13 @@ module.exports = {
       backgroundImage: {
         gradient_primary: "linear-gradient(to right bottom, #a259ff,#686cfa)",
         gradient_secondary: "linear-gradient(to right bottom, #a259ff,#ff6251)",
-        gradient_mushroom: "linear-gradient(to top, #a259ff,#2B2B2B)",
+        gradient_mushroom:
+          "linear-gradient(180deg, rgba(162.00005114078522, 89.00000989437103, 255, 0) 0%, rgb(162.00000554323196, 89.00000229477882, 255) 100%)",
+      },
+      backgroundColor: {
+        primary: "#2B2B2B",
+        secondary: "#3B3B3B",
+        purple: "#A259FF",
       },
     },
   },

@@ -10,20 +10,11 @@
         See All
       </div>
     </div>
-    <div
-      class="lg:flex justify-between flex md:hidden flex-col lg:flex-row mb-5 lg:mb-0"
-    >
+    <div class="justify-between flex flex-col md:flex-row mb-5 lg:mb-0">
       <discover-card
         class="mb-5"
         :card="card"
         v-for="card in discover"
-      ></discover-card>
-    </div>
-    <div class="md:flex lg:hidden hidden justify-between">
-      <discover-card
-        class="mb-5"
-        :card="card"
-        v-for="card in discover.splice(0, 2)"
       ></discover-card>
     </div>
     <div class="btn-black-primary-md w-full flex md:hidden">
@@ -47,6 +38,7 @@ const discover = [
     userName: "MoonDancer",
     price1: 1.63,
     price2: 0.33,
+    class: "block",
   },
   {
     img: img2,
@@ -55,6 +47,7 @@ const discover = [
     userName: "MoonDancer",
     price1: 1.63,
     price2: 0.33,
+    class: "block",
   },
   {
     img: img3,
@@ -63,6 +56,7 @@ const discover = [
     userName: "MoonDancer",
     price1: 1.63,
     price2: 0.33,
+    class: "md:hidden block lg:block",
   },
 ];
 </script>

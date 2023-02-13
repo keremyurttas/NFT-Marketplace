@@ -1,6 +1,6 @@
 <template>
-  <div class="my-container flex justify-between">
-    <div class="md:block hidden md:w-[330px] lg:w-[510px] space-y-6">
+  <div class="my-container lg:space-x-8 flex">
+    <div class="md:block w-1/2 hidden space-y-6">
       <h1
         class="md:text-2xl lg:text-4xl lg:font-bold font-semibold capitalize leading-xsmall mb-3"
       >
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div class="md:block hidden aspect-square md:w-[330px] lg:w-[510px]">
+    <div class="md:block w-1/2 hidden aspect-square">
       <img src="../assets/HighlightedNFT.svg" alt="" />
     </div>
     <div class="space-y-9 md:hidden grid">
@@ -38,7 +38,7 @@
           sell art from more than 20k NFT artists.</span
         >
       </div>
-      <div class="aspect-square w-[315px] justify-self-center">
+      <div class="aspect-square justify-self-center">
         <img src="../assets/HighlightedNFT.svg" alt="" />
       </div>
       <button class="btn-purple-primary-md justify-self-center px-24">

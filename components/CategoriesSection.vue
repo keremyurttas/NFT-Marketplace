@@ -6,15 +6,17 @@
     >
       <div
         v-for="card in categories"
-        class="bg-secondary rounded-base w-36 lg:w-60 hover"
+        class="bg-secondary rounded-base hover"
       >
         <nuxt-link to="/category">
           <div class="relative">
-            <img class="blur-sm" :src="card.img" alt="" />
-            <img class="absolute center" :src="card.icon" alt="" />
+            <img class="" :src="card.img" alt="" />
+            <div class="backdrop-blur-lg rounded-t-base center w-full h-full absolute flex justify-center items-center">
+              <img class="" :src="card.icon" alt="" />
+            </div>
           </div>
           <div
-            class="lg:px-[30px] lg:pb-[25px] p-4 pb-12 pt-[20px] font-semibold lg:text-lg text-base"
+            class="lg:px-[30px] lg:pb-[25px] pt-5 px-5 pb-6 font-semibold lg:text-lg text-base"
           >
             <h5>{{ card.name }}</h5>
           </div>

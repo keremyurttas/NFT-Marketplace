@@ -7,7 +7,7 @@
     <div class="md:flex md:gap-x-[30px] space-y-5 md:space-y-0">
       <div
         v-for="card in instructions"
-        class="lg:pb-[30px] lg:w-[330px] lg:h-[439px] lg:px-[30px] md:px-5 md:pb-[30px] md:pt-[20px] w-[315px] p-5 md:w-[210px] md:h-[320px] flex md:flex-col items-center leading-normal rounded-base bg-secondary"
+        class="lg:pb-[30px] w-full lg:px-[30px] md:px-5 md:pb-[30px] md:pt-[20px] p-5 flex md:flex-col items-center leading-normal rounded-base bg-secondary"
       >
         <img
           class="lg:mb-5 md:mr-0 md:mb-8 md:w-[160px] w-24 lg:w-[250px] aspect-square mr-5"

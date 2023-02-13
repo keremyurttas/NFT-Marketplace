@@ -1,6 +1,6 @@
 <template>
+  
   <div>
-    <nav-header></nav-header>
     <home-section></home-section>
     <trending-page></trending-page>
     <top-creators></top-creators>
@@ -9,6 +9,5 @@
     <mushroom-nft></mushroom-nft>
     <instructions-section></instructions-section>
     <email-section></email-section>
-    <nft-footer></nft-footer>
   </div>
 </template>

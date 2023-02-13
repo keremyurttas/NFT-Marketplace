@@ -1,25 +1,18 @@
 <template>
-  <div class="space-y-4 md:max-w-none max-w-[315px]">
+  <div :class="card.class" class="space-y-4">
     <nuxt-link to="/NftPage"
       ><img class="hover" :src="card.primary" alt=""
     /></nuxt-link>
-    <div class="flex md:max-w-none max-w-[315px] justify-between">
+    <div class="flex gap-x-[15px]">
       <nuxt-link to="/NftPage">
-        <img
-          class="hover w-[95px] aspect-square md:w-[100px]"
-          :src="card.secondary"
-          alt=""
+        <img class="hover aspect-square" :src="card.secondary" alt=""
       /></nuxt-link>
       <nuxt-link to="/NftPage">
-        <img
-          class="hover w-[95px] aspect-square md:w-[100px]"
-          :src="card.tertiary"
-          alt=""
-        />
+        <img class="hover aspect-square" :src="card.tertiary" alt="" />
       </nuxt-link>
-      <nuxt-link to="/NftPage"
+      <nuxt-link class="" to="/NftPage"
         ><div
-          class="w-[95px] h-[95px] md:w-[100px] md:h-[100px] hover bg-purple flex items-center justify-center font-bold text-lg py-8 px-4 rounded-base font-mono"
+          class="bg-purple md:w-[100px] w-[95px] aspect-square flex items-center justify-center font-bold text-lg rounded-base font-mono"
         >
           {{ card.count }}+
         </div></nuxt-link
