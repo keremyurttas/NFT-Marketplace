@@ -1,9 +1,6 @@
 <template>
   <nuxt-link to="/user">
-    <div
-      :class="(card.class, handleResponsivity)"
-      class="md:w-[330px] w-[315px] rounded-base bg-secondary hover"
-    >
+    <div class="md:w-[330px] w-[315px] rounded-base bg-secondary hover">
       <img class="" :src="card.img" alt="" />
       <div :class="card.class" class="pb-[25px] px-5 pt-5 rounded-b-base">
         <div>
@@ -37,28 +34,26 @@
 </template>
 <script setup>
 let params = defineProps(["card", "index"]);
+// let width = window.innerWidth;
 
-const width = ref(window.innerWidth);
+// onMounted(() => {
+//   window.addEventListener("resize", () => {
+//     width = window.innerWidth;
+//   });
+// });
 
-onMounted(() => {
-  window.addEventListener("resize", () => {
-    width.value = window.innerWidth;
-  });
-});
+// onBeforeUnmount(() => {
+//   window.removeEventListener("resize", () => {
+//     width = window.innerWidth;
+//   });
+// });
 
-onBeforeUnmount(() => {
-  window.removeEventListener("resize", () => {
-    width.value = window.innerWidth;
-  });
-});
-
-const handleResponsivity = computed(() => {
-  if (width.value > 1280) return "block";
-  else if (width.value < 830) {
-    console.log("mobile");
-    if (params.index >= 5) return "hidden";
-  } else if (830 < width.value < 1280) {
-    if (params.index >= 8) return "hidden";
-  }
-});
+// const handleResponsivity = computed(() => {
+//   if (width > 1280) return "block";
+//   else if (width < 830) {
+//     if (params.index >= 5) return "hidden";
+//   } else if (830 < width < 1280) {
+//     if (params.index >= 8) return "hidden";
+//   }
+// });
 </script>

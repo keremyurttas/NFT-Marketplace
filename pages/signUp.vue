@@ -12,7 +12,7 @@
     >
       <div class="lg:w-[460px] md:w-[325px] mb-10 space-y-3 w-[331px]">
         <h2 class="lg:text-3xl text-2xl font-semibold">Create Account</h2>
-        <p class="capitalize text-base lg:text-lg">
+        <p class="">
           Welcome! enter your details and start creating, collecting and selling
           NFTs.
         </p>

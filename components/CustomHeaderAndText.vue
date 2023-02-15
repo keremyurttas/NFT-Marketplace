@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <h3 class="my-header mb-2.5">
+    <h3 class="my-header mb-2.5 capitalize">
       <slot name="header"></slot>
     </h3>
     <span class="lg:text-lg text-base leading-large"

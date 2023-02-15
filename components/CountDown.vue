@@ -7,12 +7,16 @@
       {{ hours }} <span class="text-xl mx-3.5">:</span>{{ minutes }}
       <span class="text-xl mx-3.5">:</span>{{ seconds }}
     </div>
-    <div class="flex justify-between text-sm">
+    <div :class="{ ' mb-7': hasButton }" class="flex justify-between text-sm">
       <span>Hours</span><span>Minutes</span><span>Second</span>
     </div>
+    <button v-if="hasButton" class="btn-purple-primary-md mx-auto w-full">
+      Place Bid
+    </button>
   </div>
 </template>
 <script setup>
+defineProps(["hasButton"]);
 const hours = ref(59);
 const seconds = ref(59);
 

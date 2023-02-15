@@ -41,7 +41,7 @@ import { DiscoverCard } from '~~/.nuxt/components';
           </div>
 
           <div
-            class="lg:text-lg text-inactive font-semibold items-center gap-x-4 w-1/2 flex justify-center mb-4"
+            class="lg:text-lg text-primary font-semibold items-center gap-x-4 w-1/2 flex justify-center mb-4"
           >
             Collections
             <div
@@ -62,7 +62,7 @@ import { DiscoverCard } from '~~/.nuxt/components';
           <DiscoverCard
             :index="i"
             :card="card"
-            v-for="(card, i) in discoverCards"
+            v-for="(card, i) in handleResponsivity"
           >
           </DiscoverCard>
         </div>
@@ -188,4 +188,33 @@ const discoverCards = [
     class: "bg-primary",
   },
 ];
+
+let width;
+onMounted(() => {
+  window.addEventListener("resize", () => {
+    width.value = document.documentElement.clientWidth;
+  });
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", () => {
+    width.value = document.documentElement.clientWidth;
+  });
+});
+const handleResponsivity = computed(() => {
+  // Computed logic here
+  if (process.client) {
+    width = ref(document.documentElement.clientWidth);
+
+    if (width.value > 1280) {
+      return discoverCards;
+    } else if (830 < width.value && width.value < 1280) {
+      return discoverCards.slice(0, 8);
+    } else if (830 > width.value) {
+      return discoverCards.slice(0, 5);
+    }
+  } else {
+    return 0;
+  }
+});
 </script>

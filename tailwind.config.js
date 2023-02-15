@@ -35,6 +35,7 @@ module.exports = {
       small: 1.2,
       large: 1.5,
       normal: 1.4,
+      xlarge:1.6,
     },
     borderColor: {
       primary: "#2B2B2B",
@@ -44,7 +45,6 @@ module.exports = {
     textColor: {
       primary: "#858584",
       white: "#ffff",
-      inactive:"#858584",
       purple: "#A259FF",
       black: "#2B2B2B",
       footer: "#CCCCCC",
@@ -61,6 +61,7 @@ module.exports = {
         primary: "#2B2B2B",
         secondary: "#3B3B3B",
         purple: "#A259FF",
+        inactive: "#858584",
       },
     },
   },

@@ -17,7 +17,6 @@ input {
   @apply text-black;
 }
 
-
 .my-container {
   @apply py-10 lg:px-28  md:px-0 md:py-10 lg:py-20  lg:max-w-[1280px] mx-auto md:max-w-[690px] max-w-[315px];
 }
@@ -55,6 +54,16 @@ input {
 }
 .btn-black-primary-sm {
   @apply bg-primary hover border-purple border-2 text-white transition-all ease-in-out duration-300 rounded-base w-max h-[46px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-base font-semibold;
+}
+
+h2 {
+  @apply lg:text-3xl text-2xl font-semibold;
+}
+p,pre {
+  @apply text-base lg:text-lg leading-normal lg:leading-xlarge;
+}
+h5 {
+  @apply lg:text-lg lg:font-semibold;
 }
 
 .mushroom {
