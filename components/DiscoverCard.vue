@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link to="/user">
-    <div class="md:w-[330px] w-[315px] rounded-base bg-secondary hover">
+  <nuxt-link to="nftPage">
+    <div v-bind="$attrs" class="md:w-[330px] w-[315px] rounded-base bg-secondary hover">
       <img class="" :src="card.img" alt="" />
       <div :class="card.class" class="pb-[25px] px-5 pt-5 rounded-b-base">
         <div>
@@ -24,7 +24,7 @@
             </div>
             <div class="text-sm lg:text-base font-mono flex justify-between">
               <span> {{ card.price1 }} ETH </span>
-              <span>{{ card.price1 }} wETH</span>
+              <span>{{ card.price2 }} wETH</span>
             </div>
           </div>
         </div>

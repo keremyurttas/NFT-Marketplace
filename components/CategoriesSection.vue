@@ -1,24 +1,23 @@
 <template>
   <div class="my-container">
-    <h3 class="my-header mb-16">Browse Categories</h3>
+    <h3 class="mb-16">Browse Categories</h3>
     <div
       class="grid grid-cols-2 md:grid-cols-4 place-items-center gap-4 md:gap-8"
     >
-      <div
-        v-for="card in categories"
-        class="bg-secondary rounded-base hover"
-      >
-        <nuxt-link to="/category">
+      <div v-for="card in categories" class="bg-secondary rounded-base hover">
+        <nuxt-link to="/marketPlace">
           <div class="relative">
             <img class="" :src="card.img" alt="" />
-            <div class="backdrop-blur-lg rounded-t-base center w-full h-full absolute flex justify-center items-center">
+            <div
+              class="backdrop-blur-lg rounded-t-base center w-full h-full absolute flex justify-center items-center"
+            >
               <img class="" :src="card.icon" alt="" />
             </div>
           </div>
           <div
             class="lg:px-[30px] lg:pb-[25px] pt-5 px-5 pb-6 font-semibold lg:text-lg text-base"
           >
-            <h5>{{ card.name }}</h5>
+            <h5 class="lg:text-lg text-base">{{ card.name }}</h5>
           </div>
         </nuxt-link>
       </div>

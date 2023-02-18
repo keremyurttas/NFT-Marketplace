@@ -1,12 +1,10 @@
 <template>
   <div>
     <div class="my-container">
-      <custom-header-and-text-lg class="lg:mb-8">
-        <template #header>Top Creators </template>
-        <template #text>
-          Check out top ranking NFT artists on the NFT Marketplace.
-        </template>
-      </custom-header-and-text-lg>
+      <div class="lg:mb-8 space-y-2.5">
+        <h2>Top Creators</h2>
+        <p>Check out top ranking NFT artists on the NFT Marketplace.</p>
+      </div>
     </div>
     <div class="my-container py-0 md:block hidden">
       <div
@@ -81,7 +79,7 @@
                   :src="user.img"
                   alt=""
                 />
-                <h5 class="md:font-semibold md:text-lg">{{ user.name }}</h5>
+                <h5 class="md:font-semibold md:text-lg text-base font-normal">{{ user.name }}</h5>
               </div>
             </div>
             <div class="flex gap-x-5 items-center font-mono justify-end w-fit">

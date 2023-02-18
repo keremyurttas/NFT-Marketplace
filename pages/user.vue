@@ -18,7 +18,7 @@
             height="120"
             src="../assets/avatar-icons/Avatar Placeholder.svg"
             alt=""
-            class="border rounded-base border-purple"
+            class="border rounded-base border-tertiary"
           />
         </div>
         <div class="lg:flex justify-between">
@@ -36,7 +36,7 @@
                 />
                 0xc0E3...B79C
               </button>
-              <button class="btn-black-primary-md px-5 md:w-max w-full">
+              <button class="btn-black-primary-md px-7 md:w-max w-full">
                 <img
                   width="20"
                   height="20"
@@ -46,14 +46,16 @@
                 Follow
               </button>
             </div>
-            <div class="flex justify-between lg:w-auto w-[315px] md:w-[510px]">
+            <my-counter class="md:max-w-[65%] lg:max-w-none" :data="counter">
+            </my-counter>
+            <!-- <div class="flex justify-between lg:w-auto w-[315px] md:w-[510px]">
               <div v-for="cell in counter" class="grid pr-6 md:pr-24">
                 <strong class="text-lg lg:text-xl font-bold font-mono"
                   >{{ cell.count }}+</strong
                 >
                 <span class="text-base lg:text-lg">{{ cell.text }}</span>
               </div>
-            </div>
+            </div> -->
             <div class="text-primary lg:text-lg text-base">
               <h5 class="font-mono font-semibold">Bio</h5>
               <p class="text-white capitalize">
@@ -91,7 +93,7 @@
               />
               0xc0E3...B79C
             </button>
-            <button class="btn-black-primary-md px-5">
+            <button class="btn-black-primary-md px-7">
               <img
                 width="20"
                 height="20"
@@ -103,6 +105,7 @@
           </div>
         </div>
       </div>
+      <hr class="text-divider h-0.5" />
     </div>
     <div class="my-container py-0 pt-6">
       <div>
@@ -155,7 +158,7 @@
           </DiscoverCard>
         </div>
       </div>
-      <hr class="text-black border-[1px]" />
+      <hr class="text-secondary border-[1px]" />
     </div>
   </div>
 </template>
@@ -308,12 +311,10 @@ const handleResponsivity = computed(() => {
   // Computed logic here
   if (process.client) {
     width = ref(document.documentElement.clientWidth);
-    console.log(width.value);
     if (width.value > 1280) return discoverCards;
     if (830 < width.value && width.value < 1280) {
       return discoverCards.slice(0, 6);
     } else if (width.value < 830) {
-      console.log("mobile");
       return discoverCards.slice(0, 3);
     }
   } else {

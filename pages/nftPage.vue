@@ -88,22 +88,24 @@
         <custom-header-and-text>
           <template #header> More from this Artist </template>
         </custom-header-and-text>
-        <button class="btn-black-primary-md hidden md:flex">
-          <img
-            width="20"
-            height="20"
-            src="../assets/mini-icons/ArrowRight.svg"
-            alt=""
-          />
-          <span>Go To Artist Page</span>
-        </button>
+        <nuxt-link to="user">
+          <button class="btn-black-primary-md hidden md:flex">
+            <img
+              width="20"
+              height="20"
+              src="../assets/mini-icons/ArrowRight.svg"
+              alt=""
+            />
+            <span>Go To Artist Page</span>
+          </button>
+        </nuxt-link>
       </div>
       <div
         class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-y-[60px] gap-x-[30px] gap-y-[30px]"
       >
         <discover-card
-          :card="card"
           v-for="card in handleResponsivity"
+          :card="card"
         ></discover-card>
         <button class="btn-black-primary-md flex md:hidden w-full">
           <img
@@ -216,7 +218,7 @@ const handleResponsivity = computed(() => {
   // Computed logic here
   if (process.client) {
     width = ref(document.documentElement.clientWidth);
-    console.log(width.value);
+
     if (width.value > 1280) {
       return discoverCards;
     } else if (830 < width.value && width.value < 1280) {

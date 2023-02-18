@@ -3,15 +3,17 @@
     <div
       class="lg:p-[60px] md:px-[30px] md:py-10 md:flex items-center md:bg-secondary md:rounded-base"
     >
-      <div
-        class="lg:mr-20 mr-8  mb-[30px] md:mb-0"
-      >
-        <img class="lg:min-w-[425px] lg:h-[310px] md:min-w-[300px] md:h-[280px] min-w-[315px] h-[255px]" src="../assets/Asthronot.svg" alt="" />
+      <div class="lg:mr-20 mr-8 mb-[30px] md:mb-0">
+        <img
+          class="lg:min-w-[425px] lg:h-[310px] md:min-w-[300px] md:h-[280px] min-w-[315px] h-[255px]"
+          src="../assets/Asthronot.svg"
+          alt=""
+        />
       </div>
 
       <div class="">
         <div class="mb-10">
-          <h3 class="my-header mb-2.5 max-w-[350px] capitalize">
+          <h3 class="mb-2.5 max-w-[350px] capitalize">
             Join our weekly digest
           </h3>
           <span class="lg:text-lg text-base leading-large"

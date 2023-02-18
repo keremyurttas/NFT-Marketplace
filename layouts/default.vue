@@ -5,3 +5,4 @@
     <nft-footer></nft-footer>
   </div>
 </template>
+<script setup></script>

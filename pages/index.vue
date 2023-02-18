@@ -1,5 +1,4 @@
 <template>
-  
   <div>
     <home-section></home-section>
     <trending-page></trending-page>
@@ -11,3 +10,6 @@
     <email-section></email-section>
   </div>
 </template>
+<style></style>
+<script setup>
+</script>

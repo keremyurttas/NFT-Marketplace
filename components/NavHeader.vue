@@ -27,7 +27,7 @@
       ></div>
       <div
         v-if="isHeaderActive"
-        class="lg:hidden w-[80%] h-[80%] border-purple border-2 rounded-base grid grid-cols-1 absolute right-5 text-base top-5 px-8 py-12 grid-rows-3 bg-primary"
+        class="lg:hidden w-[80%] h-[80%] border-tertiary border-2 flex flex-col gap-y-20 rounded-base absolute right-5 text-base top-5 px-8 pb-12 pt-10 bg-primary"
       >
         <button @click="handleHeader()" class="absolute right-3 top-3">
           <img
@@ -36,12 +36,23 @@
             alt=""
           />
         </button>
-        <nuxt-link to="/marketplace"> Marketplace </nuxt-link>
-        <nuxt-link to="/rankings"> Rankings </nuxt-link>
-        <nuxt-link to="/connectWallet"> Connect a wallet </nuxt-link>
-        <nuxt-link to="/signUp">
+        <nuxt-link @click="handleHeader()" to="/marketplace">
+          <span class="">Marketplace</span>
+        </nuxt-link>
+        <nuxt-link @click="handleHeader()" to="/rankings">
+          <span class="">Rankings</span>
+        </nuxt-link>
+        <nuxt-link @click="handleHeader()" to="/connectWallet">
+          <span class="">Connect a wallet</span>
+        </nuxt-link>
+        <nuxt-link @click="handleHeader()" to="/signUp">
           <div class="btn-purple-primary-sm px-10">
-            <img class="w-5 h-5" src="../assets/mini-icons/User.svg" alt="" />
+            <img
+              width="20"
+              height="20"
+              src="../assets/mini-icons/User.svg"
+              alt=""
+            />
             Sign Up
           </div>
         </nuxt-link>
@@ -63,9 +74,4 @@ const handleHeader = function () {
     document.body.style.overflow = "auto";
   }
 };
-// watch(isHeaderActive, () => {
-//   isHeaderActive.value
-//     ? (document.body.style.overflow = "hidden")
-//     : (document.body.style.overflow = "auto");
-// });
 </script>

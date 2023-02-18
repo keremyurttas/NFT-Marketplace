@@ -60,14 +60,21 @@ import { DiscoverCard } from '~~/.nuxt/components';
           class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-[30px]"
         >
           <DiscoverCard
+            v-for="(card, i) in discoverCards"
             :index="i"
+            :class="[
+              discoverCards.length - 1 - i < 4
+                ? 'lg:block hidden'
+                : i > 3 && i < 7
+                ? 'hidden md:block'
+                : '',
+            ]"
             :card="card"
-            v-for="(card, i) in handleResponsivity"
           >
           </DiscoverCard>
         </div>
       </div>
-      <hr class="text-black border-[1px]" />
+      <hr class="text-secondary border-[1px]" />
     </div>
   </div>
 </template>
@@ -188,6 +195,22 @@ const discoverCards = [
     class: "bg-primary",
   },
 ];
+
+function handleResponsivityTest(sizes, displayClass, length, index) {
+  let x = {
+    sm: 4,
+    md: 8,
+    lg: -1,
+  };
+  //4-5-6...9
+  //8-9
+  i >= x.sm;
+  return {
+    "hidden md:block": i >= x.sm,
+  };
+
+  //hiddens index = (length-1) - (count-1) items from end
+}
 
 let width;
 onMounted(() => {

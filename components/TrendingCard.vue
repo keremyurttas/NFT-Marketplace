@@ -12,7 +12,7 @@
       </nuxt-link>
       <nuxt-link class="" to="/NftPage"
         ><div
-          class="bg-purple md:w-[100px] w-[95px] aspect-square flex items-center justify-center font-bold text-lg rounded-base font-mono"
+          class="bg-tertiary md:w-[100px] w-[95px] aspect-square flex items-center justify-center font-bold text-lg rounded-base font-mono"
         >
           {{ card.count }}+
         </div></nuxt-link

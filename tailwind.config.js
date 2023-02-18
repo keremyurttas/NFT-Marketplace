@@ -35,19 +35,12 @@ module.exports = {
       small: 1.2,
       large: 1.5,
       normal: 1.4,
-      xlarge:1.6,
+      xlarge: 1.6,
     },
     borderColor: {
       primary: "#2B2B2B",
       secondary: "#3B3B3B",
-      purple: "#A259FF",
-    },
-    textColor: {
-      primary: "#858584",
-      white: "#ffff",
-      purple: "#A259FF",
-      black: "#2B2B2B",
-      footer: "#CCCCCC",
+      tertiary: "#A259FF",
     },
 
     extend: {
@@ -57,10 +50,16 @@ module.exports = {
         gradient_mushroom:
           "linear-gradient(180deg, rgba(162.00005114078522, 89.00000989437103, 255, 0) 0%, rgb(162.00000554323196, 89.00000229477882, 255) 100%)",
       },
+      textColor: {
+        primary: "#858584",
+        secondary: "#2B2B2B",
+        footer: "#CCCCCC",
+        divider: "#3B3B3B",
+      },
       backgroundColor: {
         primary: "#2B2B2B",
         secondary: "#3B3B3B",
-        purple: "#A259FF",
+        tertiary: "#A259FF",
         inactive: "#858584",
       },
     },

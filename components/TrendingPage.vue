@@ -1,11 +1,9 @@
 <template>
   <div class="my-container">
-    <custom-header-and-text class="mb-10 lg:mb-14">
-      <template #header> Trending Collection </template>
-      <template #text>
-        Checkout our weekly updated trending collection.
-      </template>
-    </custom-header-and-text>
+    <div class="mb-10 lg:mb-14 space-y-2.5">
+      <h3>Trending Collection</h3>
+      <p>Checkout our weekly updated trending collection.</p>
+    </div>
     <div class="flex justify-between space-x-8">
       <trending-card :card="card" v-for="card in trendings"></trending-card>
     </div>

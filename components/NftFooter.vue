@@ -2,7 +2,7 @@
   <footer class="bg-secondary">
     <div class="my-container py-10 text-footer">
       <div
-        class="lg:flex justify-between lg:gap-y-0 space-y-8 lg:space-y-0 mb-8 md:mb-12 lg:mb-8"
+        class="lg:flex justify-between lg:gap-y-0 gap-y-8 mb-8 md:mb-12 lg:mb-8"
       >
         <div class="">
           <img
@@ -10,9 +10,9 @@
             src="../assets/nav/logo.svg"
             alt=""
           />
-          <p class="mb-5 lg:w-64">
-            NFT marketplace UI created with Anima for Figma.
-          </p>
+          <div class="mb-5 lg:w-64">
+            <span> NFT marketplace UI created with Anima for Figma. </span>
+          </div>
           <div class="space-y-4">
             <span class="">Join our community</span>
             <div class="flex gap-x-2.5">
@@ -38,7 +38,7 @@
           <div class="flex flex-col gap-y-5">
             <nuxt-link to="/marketplace">Marketplace</nuxt-link>
             <nuxt-link to="/rankings">Rankings</nuxt-link>
-            <nuxt-link to="/wallet">Connect a wallet</nuxt-link>
+            <nuxt-link to="/connectWallet">Connect a wallet</nuxt-link>
           </div>
         </div>
         <div>
@@ -47,9 +47,11 @@
           >
             Join our weekly digest
           </h5>
-          <p class="lg:w-72 mb-5">
-            Get exclusive promotions & updates straight to your inbox.
-          </p>
+          <div class="lg:w-72 mb-5">
+            <span
+              >Get exclusive promotions & updates straight to your inbox.</span
+            >
+          </div>
           <div class="md:flex">
             <input
               class="md:w-[425px] w-full py-4 px-5 placeholder:capitalize placeholder:text-base md:h-[60px] md:-mr-[178px] h-[46px] rounded-base mb-4 md:mb-0"

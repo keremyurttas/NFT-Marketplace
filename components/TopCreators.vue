@@ -1,13 +1,11 @@
 <template>
   <div class="my-container">
     <div class="flex justify-between items-end mb-10">
-      <custom-header-and-text class="mb-0 md:max-w-[50%] lg:max-w-full">
-        <template #header>Top Creators</template>
-        <template #text
-          >Checkout Top Rated Creators on the NFT Marketplace</template
-        >
-      </custom-header-and-text>
-      <nuxt-link to="/ranking">
+      <div class="mb-0 md:max-w-[50%] lg:max-w-full space-y-2.5">
+        <h3>Top Creators</h3>
+        <p>Checkout Top Rated Creators on the NFT Marketplace</p>
+      </div>
+      <nuxt-link to="/rankings">
         <div class="btn-black-primary-md hidden md:flex">
           <img src="../assets/RocketLaunchPurple.svg" alt="" />
           View Rankings
@@ -15,7 +13,7 @@
       </nuxt-link>
     </div>
     <div
-      class="lg:grid-cols-4 grid lg:gap-y-8 md:grid-cols-2 md:gap-y-[30px] space-y-5 gap-x-5 place-items-center lg:gap-x-8"
+      class="lg:grid-cols-4 grid lg:gap-y-8 md:grid-cols-2 md:gap-y-[30px] gap-x-5 place-items-center lg:gap-x-8 gap-y-5"
     >
       <creator-card
         :card="card"

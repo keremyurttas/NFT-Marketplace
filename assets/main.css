@@ -14,15 +14,13 @@ input:focus {
   outline: none;
 }
 input {
-  @apply text-black;
+  @apply text-secondary;
 }
 
 .my-container {
   @apply py-10 lg:px-28  md:px-0 md:py-10 lg:py-20  lg:max-w-[1280px] mx-auto md:max-w-[690px] max-w-[315px];
 }
-.my-header {
-  @apply lg:text-2xl lg:leading-small text-xl font-semibold;
-}
+
 .hover {
   @apply transition-all;
 }
@@ -38,32 +36,38 @@ input {
 
 /* buttons */
 .btn-purple-primary-lg {
-  @apply bg-purple text-white transition-all ease-in-out duration-300 rounded-base w-max h-[72px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-lg font-semibold;
+  @apply bg-tertiary  transition-all ease-in-out duration-300 rounded-base w-max h-[72px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-lg font-semibold;
 }
 .btn-black-primary-lg {
-  @apply bg-primary hover border-purple border-2 text-white transition-all ease-in-out duration-300 rounded-base leading-normal w-max h-[72px]  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-lg font-semibold;
+  @apply bg-primary hover border-tertiary border-2  transition-all ease-in-out duration-300 rounded-base leading-normal w-max h-[72px]  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-lg font-semibold;
 }
 .btn-purple-primary-md {
-  @apply bg-purple hover text-white transition-all ease-in-out duration-300 rounded-base w-max h-[60px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-base font-semibold;
+  @apply bg-tertiary hover  transition-all ease-in-out duration-300 rounded-base w-max h-[60px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-base font-semibold;
 }
 .btn-black-primary-md {
-  @apply bg-primary hover hover border-purple border-2 text-white transition-all ease-in-out duration-300 rounded-base w-max h-[60px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-base font-semibold;
+  @apply bg-primary hover hover border-tertiary border-2  transition-all ease-in-out duration-300 rounded-base w-max h-[60px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-base font-semibold;
 }
 .btn-purple-primary-sm {
-  @apply bg-purple hover text-white transition-all ease-in-out duration-300 rounded-base w-max h-[46px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-base font-semibold;
+  @apply bg-tertiary hover  transition-all ease-in-out duration-300 rounded-base w-max h-[46px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-base font-semibold;
 }
 .btn-black-primary-sm {
-  @apply bg-primary hover border-purple border-2 text-white transition-all ease-in-out duration-300 rounded-base w-max h-[46px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-base font-semibold;
+  @apply bg-primary hover border-tertiary border-2  transition-all ease-in-out duration-300 rounded-base w-max h-[46px] leading-normal  flex items-center justify-center px-[50px] py-5 gap-x-3 font-sans text-base font-semibold;
+}
+h1{
+ @apply text-xl md:text-2xl lg:text-4xl lg:font-bold font-semibold capitalize leading-xsmall
 }
 
 h2 {
   @apply lg:text-3xl text-2xl font-semibold;
 }
-p,pre {
+h3 {
+  @apply lg:text-2xl lg:leading-small text-xl font-semibold capitalize;
+}
+p {
   @apply text-base lg:text-lg leading-normal lg:leading-xlarge;
 }
 h5 {
-  @apply lg:text-lg lg:font-semibold;
+  @apply lg:text-xl text-lg font-semibold;
 }
 
 .mushroom {
@@ -73,10 +77,6 @@ h5 {
   -o-background-size: cover;
   background-size: cover;
 }
-/* .mushroom:after {
-  content: "";
-  @apply bg-gradient_mushroom absolute w-full h-full;
-} */
 
 @tailwind components;
 @tailwind utilities;

@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/user">
+  <nuxt-link to="user">
     <div
       :class="card.class"
       class="hover lg:p-5 rounded-base bg-secondary w-full flex lg:flex-col items-center justify-center p-5 relative gap-x-5"
@@ -17,7 +17,7 @@
 
       <div class="flex flex-col lg:items-center pb-0.5 px-2">
         <h5 class="font-semibold text-lg">{{ card.username }}</h5>
-        <span class="text-base text-primary"
+        <span class="w-max text-primary"
           >Total Sales:
           <strong class="font-mono text-white font-normal">
             {{ card.totalSales }} ETH</strong

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex my-container md:flex-row flex-col max-w-none md:mx-0 p-0 md:gap-x-10 lg:gap-x-[60px] relative"
+    class="flex my-container md:flex-row flex-col max-w-none md:mx-0 p-0 md:gap-x-10 lg:gap-x-[60px] "
   >
     <img
       class="md:mb-0 h-[232px] lg:min-w-[610px] md:min-w-[397px] min-w-full md:h-[615px] lg:h-[691px] w-[47%] object-cover"

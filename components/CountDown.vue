@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-[30px] bg-secondary rounded opacity-90 w-[315px] lg:w-min rounded-base h-min"
+    class="p-[30px] bg-secondary rounded opacity-90 lg:w-min rounded-base h-min"
   >
     <div class="font-mono text-sm">Auction ends in:</div>
     <div class="text-2xl font-mono font-bold flex items-center">

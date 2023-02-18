@@ -1,75 +1,38 @@
 <template>
-  <div class="my-container lg:space-x-8 flex">
-    <div class="md:block w-1/2 hidden space-y-6">
-      <h1
-        class="md:text-2xl lg:text-4xl lg:font-bold font-semibold capitalize leading-xsmall mb-3"
-      >
-        Discover digital art & Collect NFTs
-      </h1>
+  <div class="my-container md:gap-x-8 flex">
+    <div class="block md:w-1/2 space-y-6">
+      <component :is="`h${title}`"></component>
+      <h1 class="mb-3">Discover digital art & Collect NFTs</h1>
       <span class="md:text-base lg:text-lg font-normal"
         >NFT marketplace UI created with Anima for Figma. Collect, buy and sell
         art from more than 20k NFT artists.</span
       >
-      <button class="btn-purple-primary-md">
+      <div class="aspect-square md:hidden">
+        <img src="../assets/HighlightedNFT.svg" alt="" />
+      </div>
+      <button class="btn-purple-primary-md w-full md:w-auto">
         <img src="../assets/RocketLaunchWhite.svg" alt="" />
         Get Started
       </button>
-      <div class="flex justify-between">
-        <div v-for="cell in counter" class="grid pr-8">
-          <strong class="md:text-lg lg:text-xl font-bold font-mono"
-            >{{ cell.count }}k+</strong
-          >
-          <span class="text-[24px] md:text-base lg:text-base">{{
-            cell.text
-          }}</span>
-        </div>
-      </div>
+      <my-counter :data="counter"> </my-counter>
     </div>
     <div class="md:block w-1/2 hidden aspect-square">
       <img src="../assets/HighlightedNFT.svg" alt="" />
-    </div>
-    <div class="space-y-9 md:hidden grid">
-      <div>
-        <h1 class="text-xl mb-3 font-semibold capitalize leading-normal">
-          Discover digital art & Collect NFTs
-        </h1>
-        <span class="text-base font-normal"
-          >NFT marketplace UI created with Anima for Figma. Collect, buy and
-          sell art from more than 20k NFT artists.</span
-        >
-      </div>
-      <div class="aspect-square justify-self-center">
-        <img src="../assets/HighlightedNFT.svg" alt="" />
-      </div>
-      <button class="btn-purple-primary-md justify-self-center px-24">
-        <img src="../assets/RocketLaunchWhite.svg" alt="" />
-        Get Started
-      </button>
-      <div class="flex justify-between">
-        <div v-for="cell in counter" class="grid">
-          <strong class="text-lg font-bold font-mono"
-            >{{ cell.count }}k+</strong
-          >
-          <span class="text-basemd:text-base lg:text-base">{{
-            cell.text
-          }}</span>
-        </div>
-      </div>
     </div>
   </div>
 </template>
 <script setup>
 const counter = [
   {
-    count: 240,
+    count: "240k",
     text: "Total Sale",
   },
   {
-    count: 100,
+    count: "100k",
     text: "Auctions",
   },
   {
-    count: 240,
+    count: "240k",
     text: "Artists",
   },
 ];

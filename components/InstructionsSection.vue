@@ -1,9 +1,9 @@
 <template>
   <div class="my-container">
-    <custom-header-and-text class="lg:mb-12 mb-10 lg:max-w-full">
-      <template #header>How it works</template>
-      <template #text>Find out how to get started</template>
-    </custom-header-and-text>
+    <div class="lg:mb-12 mb-10 lg:max-w-full space-y-2.5">
+      <h3 >How it works</h3>
+      <p >Find out how to get started</p>
+    </div>
     <div class="md:flex md:gap-x-[30px] space-y-5 md:space-y-0">
       <div
         v-for="card in instructions"
