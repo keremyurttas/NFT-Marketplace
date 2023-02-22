@@ -1,6 +1,9 @@
 <template>
   <nuxt-link to="nftPage">
-    <div v-bind="$attrs" class="md:w-[330px] w-[315px] rounded-base bg-secondary hover">
+    <div
+      v-bind="$attrs"
+      class="md:w-[330px] w-[315px] rounded-base bg-secondary hover"
+    >
       <img class="" :src="card.img" alt="" />
       <div :class="card.class" class="pb-[25px] px-5 pt-5 rounded-b-base">
         <div>

@@ -104,9 +104,23 @@
         class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-y-[60px] gap-x-[30px] gap-y-[30px]"
       >
         <discover-card
-          v-for="card in handleResponsivity"
+          v-for="(card, i) in discoverCards"
           :card="card"
-        ></discover-card>
+          :class="
+            handleResponsivity(
+              {
+                sm: 2,
+                md: 6,
+                lg: -1,
+              },
+              'block',
+              discoverCards.length,
+              i
+            )
+          "
+        >
+          ></discover-card
+        >
         <button class="btn-black-primary-md flex md:hidden w-full">
           <img
             width="20"
@@ -126,6 +140,7 @@ import img1 from "../assets/discover-images/Image Placeholder.svg";
 import img2 from "../assets/discover-images/Image Placeholder-1.svg";
 import img3 from "../assets/discover-images/Image Placeholder-2.svg";
 import avatar1 from "../assets/avatar-icons/avatar1.svg";
+import handleResponsivity from "../utils/responsive";
 
 const tags = ["animation", "illustration", "moon", "moon"];
 const discoverCards = [
@@ -202,32 +217,4 @@ const discoverCards = [
     price2: 0.33,
   },
 ];
-let width;
-onMounted(() => {
-  window.addEventListener("resize", () => {
-    width.value = document.documentElement.clientWidth;
-  });
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener("resize", () => {
-    width.value = document.documentElement.clientWidth;
-  });
-});
-const handleResponsivity = computed(() => {
-  // Computed logic here
-  if (process.client) {
-    width = ref(document.documentElement.clientWidth);
-
-    if (width.value > 1280) {
-      return discoverCards;
-    } else if (830 < width.value && width.value < 1280) {
-      return discoverCards.slice(0, 6);
-    } else if (830 > width.value) {
-      return discoverCards.slice(0, 2);
-    }
-  } else {
-    return 0;
-  }
-});
 </script>

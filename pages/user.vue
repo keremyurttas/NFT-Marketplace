@@ -153,7 +153,19 @@
           <DiscoverCard
             :index="i"
             :card="card"
-            v-for="(card, i) in handleResponsivity"
+            v-for="(card, i) in discoverCards"
+            :class="
+              handleResponsivity(
+                {
+                  sm: 3,
+                  md: 6,
+                  lg: -1,
+                },
+                'block',
+                discoverCards.length,
+                i
+              )
+            "
           >
           </DiscoverCard>
         </div>
@@ -169,7 +181,7 @@ import img3 from "../assets/discover-images/Image Placeholder-2.svg";
 import avatar1 from "../assets/avatar-icons/avatar1.svg";
 import avatar2 from "../assets/avatar-icons/avatar2.svg";
 import avatar3 from "../assets/avatar-icons/avatar3.svg";
-
+import handleResponsivity from "../utils/responsive"
 const counter = [
   {
     count: "250k",
@@ -294,31 +306,4 @@ const discoverCards = [
     class: "bg-primary",
   },
 ];
-let width;
-
-onMounted(() => {
-  window.addEventListener("resize", () => {
-    width.value = document.documentElement.clientWidth;
-  });
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener("resize", () => {
-    width.value = document.documentElement.clientWidth;
-  });
-});
-const handleResponsivity = computed(() => {
-  // Computed logic here
-  if (process.client) {
-    width = ref(document.documentElement.clientWidth);
-    if (width.value > 1280) return discoverCards;
-    if (830 < width.value && width.value < 1280) {
-      return discoverCards.slice(0, 6);
-    } else if (width.value < 830) {
-      return discoverCards.slice(0, 3);
-    }
-  } else {
-    return 0; // Return a default value if running on the server-side
-  }
-});
 </script>

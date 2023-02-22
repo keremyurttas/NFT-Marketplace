@@ -1,5 +1,3 @@
-import { DiscoverCard } from '~~/.nuxt/components';
-
 <template>
   <div>
     <div class="my-container">
@@ -62,15 +60,27 @@ import { DiscoverCard } from '~~/.nuxt/components';
           <DiscoverCard
             v-for="(card, i) in discoverCards"
             :index="i"
-            :class="[
+            :class="
+              handleResponsivity(
+                {
+                  sm: 4,
+                  md: 8,
+                  lg: -1,
+                },
+                'block',
+                discoverCards.length,
+                i
+              )
+            "
+            :card="card"
+          >
+            <!-- :class="[
               discoverCards.length - 1 - i < 4
                 ? 'lg:block hidden'
                 : i > 3 && i < 7
                 ? 'hidden md:block'
                 : '',
-            ]"
-            :card="card"
-          >
+            ]" -->
           </DiscoverCard>
         </div>
       </div>
@@ -85,6 +95,7 @@ import img3 from "../assets/discover-images/Image Placeholder-2.svg";
 import avatar1 from "../assets/avatar-icons/avatar1.svg";
 import avatar2 from "../assets/avatar-icons/avatar2.svg";
 import avatar3 from "../assets/avatar-icons/avatar3.svg";
+import handleResponsivity from "../utils/responsive";
 const discoverCards = [
   {
     img: img1,
@@ -196,48 +207,40 @@ const discoverCards = [
   },
 ];
 
-function handleResponsivityTest(sizes, displayClass, length, index) {
-  let x = {
-    sm: 4,
-    md: 8,
-    lg: -1,
-  };
-  //4-5-6...9
-  //8-9
-  i >= x.sm;
-  return {
-    "hidden md:block": i >= x.sm,
-  };
+// function handleResponsivityTest(sizes, displayClass, length, index) {
+//   return index > sizes.md - 1
+//     ? `lg:${displayClass} hidden`
+//     : index <= length - sizes.sm - 1 && index > length - sizes.md - 1
+//     ? `md:${displayClass} hidden`
+//     : "";
+// }
 
-  //hiddens index = (length-1) - (count-1) items from end
-}
+// let width;
+// onMounted(() => {
+//   window.addEventListener("resize", () => {
+//     width.value = document.documentElement.clientWidth;
+//   });
+// });
 
-let width;
-onMounted(() => {
-  window.addEventListener("resize", () => {
-    width.value = document.documentElement.clientWidth;
-  });
-});
+// onBeforeUnmount(() => {
+//   window.removeEventListener("resize", () => {
+//     width.value = document.documentElement.clientWidth;
+//   });
+// });
+// const handleResponsivity = computed(() => {
+//   // Computed logic here
+//   if (process.client) {
+//     width = ref(document.documentElement.clientWidth);
 
-onBeforeUnmount(() => {
-  window.removeEventListener("resize", () => {
-    width.value = document.documentElement.clientWidth;
-  });
-});
-const handleResponsivity = computed(() => {
-  // Computed logic here
-  if (process.client) {
-    width = ref(document.documentElement.clientWidth);
-
-    if (width.value > 1280) {
-      return discoverCards;
-    } else if (830 < width.value && width.value < 1280) {
-      return discoverCards.slice(0, 8);
-    } else if (830 > width.value) {
-      return discoverCards.slice(0, 5);
-    }
-  } else {
-    return 0;
-  }
-});
+//     if (width.value > 1280) {
+//       return discoverCards;
+//     } else if (830 < width.value && width.value < 1280) {
+//       return discoverCards.slice(0, 8);
+//     } else if (830 > width.value) {
+//       return discoverCards.slice(0, 5);
+//     }
+//   } else {
+//     return 0;
+//   }
+// });
 </script>

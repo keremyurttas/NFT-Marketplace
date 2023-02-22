@@ -15,8 +15,20 @@
     <div class="justify-between flex flex-col md:flex-row mb-5 lg:mb-0">
       <discover-card
         class="mb-5"
-        v-for="card in handleResponsivity"
+        v-for="(card, i) in discoverCards"
         :card="card"
+        :class="
+          handleResponsivity(
+            {
+              sm: 2,
+              md: 2,
+              lg: -1,
+            },
+            'block',
+            discoverCards.length,
+            i
+          )
+        "
       ></discover-card>
     </div>
     <div class="btn-black-primary-md w-full flex md:hidden">
@@ -26,12 +38,14 @@
   </div>
 </template>
 <script setup>
+import handleResponsivity from "~~/utils/responsive";
 import img1 from "../assets/discover-images/Image Placeholder.svg";
 import img2 from "../assets/discover-images/Image Placeholder-1.svg";
 import img3 from "../assets/discover-images/Image Placeholder-2.svg";
 import avatar1 from "../assets/avatar-icons/avatar1.svg";
 import avatar2 from "../assets/avatar-icons/avatar2.svg";
 import avatar3 from "../assets/avatar-icons/avatar3.svg";
+
 const discoverCards = [
   {
     img: img1,
@@ -40,7 +54,6 @@ const discoverCards = [
     userName: "MoonDancer",
     price1: 1.63,
     price2: 0.33,
-    class: "block",
   },
   {
     img: img2,
@@ -49,7 +62,6 @@ const discoverCards = [
     userName: "MoonDancer",
     price1: 1.63,
     price2: 0.33,
-    class: "block",
   },
   {
     img: img3,
@@ -58,36 +70,6 @@ const discoverCards = [
     userName: "MoonDancer",
     price1: 1.63,
     price2: 0.33,
-    class: "md:hidden block lg:block",
   },
 ];
-
-let width;
-
-onMounted(() => {
-  window.addEventListener("resize", () => {
-    width.value = document.documentElement.clientWidth;
-  });
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener("resize", () => {
-    width.value = document.documentElement.clientWidth;
-  });
-});
-const handleResponsivity = computed(() => {
-  // Computed logic here
-  if (process.client) {
-    width = ref(document.documentElement.clientWidth);
-
-    if (width.value > 1280) return discoverCards;
-    if (830 < width.value && width.value < 1280) {
-      return discoverCards.slice(0, 2);
-    } else if (width.value < 830) {
-      return discoverCards;
-    }
-  } else {
-    return 0; // Return a default value if running on the server-side
-  }
-});
 </script>
