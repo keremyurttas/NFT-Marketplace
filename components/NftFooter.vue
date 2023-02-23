@@ -16,16 +16,16 @@
           <div class="space-y-4">
             <span class="">Join our community</span>
             <div class="flex gap-x-2.5">
-              <a href="discord.gg">
+              <a href="https://discord.gg">
                 <img src="../assets/mini-icons/DiscordLogo.svg" alt="" />
               </a>
-              <a href="youtube.com">
+              <a href="https://youtube.com">
                 <img src="../assets/mini-icons/YoutubeLogo.svg" alt="" />
               </a>
-              <a href="twitter.com">
+              <a href="https://twitter.com">
                 <img src="../assets/mini-icons/TwitterLogo.svg" alt="" />
               </a>
-              <a href="www.instagram.com">
+              <a href="https:/instagram.com">
                 <img src="../assets/mini-icons/InstagramLogo.svg" alt="" />
               </a>
             </div>

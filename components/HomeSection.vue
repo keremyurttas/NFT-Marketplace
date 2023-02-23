@@ -36,4 +36,22 @@ const counter = [
     text: "Artists",
   },
 ];
+
+function countUp  (endPoint) {
+  const startCount = 0;
+  const endCount = endPoint;
+  const duration = 5000; // in milliseconds
+  const step = Math.ceil((endCount - startCount) / (duration / 1000));
+  let count = startCount;
+   const timer = setInterval(() => {
+        count += step; // update the count
+        if (count >= endCount) {
+          clearInterval(timer); // stop the animation when the end count is reached
+          count = endCount; // ensure the final count is accurate
+        }
+        console.log(count)
+         // update the HTML element
+      }, 10); // update the count every 10 milliseconds
+      return count
+};
 </script>

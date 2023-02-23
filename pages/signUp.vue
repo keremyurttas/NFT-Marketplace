@@ -8,7 +8,7 @@
       alt=""
     />
     <div
-      class="flex flex-col pt-[30px] pb-10 md:py-[100px] lg:items-start items-center"
+      class="flex flex-col pt-[30px] pb-10 md:py-[90px] lg:items-start items-center"
     >
       <div class="lg:w-[460px] md:w-[325px] mb-10 space-y-3 w-[331px]">
         <h2 class="lg:text-3xl text-2xl font-semibold">Create Account</h2>
@@ -18,20 +18,23 @@
         </p>
       </div>
       <div class="w-max">
-        <div class="space-y-4 mb-7 ">
+        <div class="space-y-4 mb-7">
           <div
-            v-for="item in inputs"
-            class="flex gap-x-3 items-center bg-white rounded-base px-5 py-4 h-[46px] lg:max-w-none max-w-[315px] "
+            :key="index"
+            v-for="(item, index) in inputs"
+            class="flex gap-x-3 items-center bg-white rounded-base px-5 py-4 h-[46px] lg:max-w-none max-w-[315px]"
           >
             <img class="w-5 max-h-5" :src="item.logo" alt="" />
             <input
-              class="placeholder:text-base placeholder:leading-xsmall placeholder:text-primary "
+              class="placeholder:text-base placeholder:leading-xsmall placeholder:text-primary"
               :placeholder="item.text"
               type="text"
             />
           </div>
         </div>
-        <button class="btn-purple-primary-sm w-full lg:px-[105px] px-0 lg:max-w-none max-w-[315px]">
+        <button
+          class="btn-purple-primary-sm w-full lg:px-[105px] px-0 lg:max-w-none max-w-[315px]"
+        >
           Create account
         </button>
       </div>

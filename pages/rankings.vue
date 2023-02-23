@@ -44,25 +44,75 @@
     </div>
 
     <div class="my-container py-10 space-y-5">
-      <div
-        class="border-secondary border rounded-base py-3 md:px-5 px-2.5 flex justify-between"
+       <div
+        class="w-full py-3 grid grid-cols-11 items-center md:gap-5 px-3 md:px-5 border rounded-base border-secondary"
       >
-        <div class="flex w-[215px] md:W-[430px] gap-x-2.5 md:gap-x-5">
-          <div class="text-sm lg:text-base w-6 lg:w-[30px] flex justify-center">
-            #
+        <div
+          class="grid col-span-8 md:col-span-7 lg:col-span-5 grid-cols-11 gap-5 items-center"
+        >
+          <div class="col-span-1">
+            <div
+              class="text-sm lg:text-base font-sans aspect-square bg-transparent rounded-base lg:bg-primary flex items-center justify-center  "
+            >
+              #
+            </div>
           </div>
-          <span class="text-sm md:text-base">Artist</span>
+         
+          <div class="col-span-10 text-sm md:text-base">
+            Artist
+          </div>
         </div>
-        <div class="text-sm flex gap-x-5 md:text-base">
-          <span class="md:w-[100px] lg:w-40 lg:block hidden">Change</span>
-          <span class="md:w-[100px] lg:w-40 md:block hidden">NFTs Sold</span>
-          <span class="w-20 md:w-[100px] lg:w-40 text-sm md:text-base"
-            >Volume</span
-          >
+        <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 col-span-3 md:col-span-4 lg:col-span-6">
+          <span class=" lg:block hidden">Change</span>
+
+          <span class=" md:block hidden">NFTs Sold</span>
+
+          <span class="md:text-base text-sm">Volume</span>
+        </div>
+      </div>
+      
+
+      <div
+        v-for="(user, index) in users"
+        :key="index"
+        class="w-full py-3 grid grid-cols-11 items-center md:gap-5 px-3   md:px-5 rounded-base bg-secondary"
+      >
+        <div
+          class="grid col-span-8 md:col-span-7 lg:col-span-5 grid-cols-11 lg:gap-5 gap-2 items-center"
+        >
+          <div class="col-span-1">
+            <div
+              class="lg:w-[30px] text-sm md:text-base aspect-square  bg-transparent rounded-base lg:bg-primary flex items-center justify-center font-mono text-primary"
+            >
+              {{ index + 1 }}
+            </div>
+          </div>
+          <div class="md:col-span-1  col-span-2 lg:col-span-2">
+            <img class="lg:w-[60px] w-6 aspect-square" :src="user.img" alt="" />
+          </div>
+          <div class=" col-span-8">
+            <h5
+              class="md:font-semibold md:text-lg text-base font-normal truncate"
+            >
+              {{ user.name }}
+            </h5>
+          </div>
+        </div>
+        <div class="grid font-mono md:grid-cols-2 grid-cols-1 lg:grid-cols-3  col-span-3 md:col-span-4 lg:col-span-6">
+          <span class="text-[#00AC4F] md:block hidden">{{ user.change }}</span>
+
+          <span class="lg:block hidden">{{ user.sold }}</span>
+
+          <span class="md:text-base text-sm">{{ user.volume }} ETH</span>
         </div>
       </div>
 
-      <div v-for="(user, index) in users">
+      <!-- <div class="grid h-20 bg-red-500 w-full grid-cols-3 gap-10 mt-20">
+          <div class="bg-gray-200  "></div>
+          <div class="bg-gray-400"></div>
+          <div class="bg-gray-200"></div>
+        </div> -->
+      <!-- <div v-for="(user, index) in users">
         <nuxt-link to="user">
           <div
             class="bg-secondary rounded-base py-3 px-2.5 md:px-5 flex justify-between"
@@ -79,7 +129,9 @@
                   :src="user.img"
                   alt=""
                 />
-                <h5 class="md:font-semibold md:text-lg text-base font-normal">{{ user.name }}</h5>
+                <h5 class="md:font-semibold md:text-lg text-base font-normal">
+                  {{ user.name }}
+                </h5>
               </div>
             </div>
             <div class="flex gap-x-5 items-center font-mono justify-end w-fit">
@@ -93,7 +145,7 @@
             </div>
           </div>
         </nuxt-link>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
