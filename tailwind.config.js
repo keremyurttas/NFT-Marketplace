@@ -62,12 +62,6 @@ module.exports = {
         tertiary: "#A259FF",
         inactive: "#858584",
       },
-      gridTemplateColumns: {
-        13: "repeat(13, minmax(0, 1fr))",
-      },
-      gridTemplateRows: {
-        14: "repeat(14, minmax(0, 1fr))",
-      },
     },
   },
   plugins: [],

@@ -7,7 +7,7 @@
         >NFT marketplace UI created with Anima for Figma. Collect, buy and sell
         art from more than 20k NFT artists.</span
       >
-      <div class="aspect-square md:hidden">
+      <div class="aspect-square md:hidden ">
         <img src="../assets/HighlightedNFT.svg" alt="" />
       </div>
       <button class="btn-purple-primary-md w-full md:w-auto">
